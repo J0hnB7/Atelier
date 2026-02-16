@@ -1,0 +1,3331 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="VIKA">
+    <link rel="apple-touch-icon" href="data:image/png;base64,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">
+    <title>Atelier Manager - Správa zakázkového šití</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #faf8f5 0%, #f5f1eb 100%);
+            min-height: 100vh;
+            color: #292524;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .heading-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header - Mobile optimized */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e7e5e4;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 1rem 0;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            color: #292524;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        
+        .header p {
+            color: #78716c;
+            margin-top: 0.25rem;
+            font-size: 0.875rem;
+        }
+        
+        /* Navigation - Mobile optimized */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e7e5e4;
+            position: sticky;
+            top: 64px;
+            z-index: 40;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .nav::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 0;
+            list-style: none;
+            min-width: min-content;
+        }
+        
+        .nav-button {
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 0.875rem 1rem;
+            cursor: pointer;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #78716c;
+            white-space: nowrap;
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+        
+        .nav-button:active {
+            transform: scale(0.95);
+        }
+        
+        .nav-button.active {
+            color: #292524;
+            border-bottom-color: #8b7460;
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 1rem 0 5rem 0;
+            min-height: calc(100vh - 140px);
+        }
+        
+        /* Cards - Mobile optimized */
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(139, 116, 96, 0.1);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .card:active {
+            transform: scale(0.98);
+        }
+        
+        /* Grid - Responsive */
+        .grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .grid-1 { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        
+        @media (min-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .header { padding: 1.5rem 0; }
+            .nav { top: 88px; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .grid-4 { grid-template-columns: repeat(4, 1fr); }
+            .card { padding: 1.5rem; }
+        }
+        
+        /* Buttons - Touch optimized */
+        .btn {
+            padding: 0.875rem 1.25rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            touch-action: manipulation;
+            min-height: 44px;
+        }
+        
+        .btn:active {
+            transform: scale(0.95);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #8b7460 0%, #a89380 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(139, 116, 96, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #f5f5f4;
+            color: #292524;
+            border: 1px solid #d6d3d1;
+        }
+        
+        .btn-danger {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+        
+        .btn-success {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .btn-small {
+            padding: 0.5rem 0.75rem;
+            font-size: 1.25rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        .btn-export {
+            background: linear-gradient(135deg, #8b7460 0%, #a89380 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(139, 116, 96, 0.3);
+            font-size: 1.5rem;
+        }
+        
+        /* Forms - Touch optimized */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #292524;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e8e3dc;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #8b7460;
+            box-shadow: 0 0 0 4px rgba(139, 116, 96, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Stats Cards - Mobile optimized */
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(139, 116, 96, 0.1);
+        }
+        
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #78716c;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #292524;
+            margin-top: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .stat-card { padding: 1.5rem; }
+            .stat-icon { font-size: 2.5rem; }
+            .stat-label { font-size: 0.875rem; }
+            .stat-value { font-size: 1.5rem; }
+        }
+        
+        /* List Items - Touch optimized */
+        .list-item {
+            background: #fafaf9;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 0.75rem;
+            transition: background 0.2s;
+            touch-action: manipulation;
+        }
+        
+        .list-item:active {
+            background: #f5f5f4;
+        }
+        
+        /* Fabric Card - Mobile optimized */
+        .fabric-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(139, 116, 96, 0.1);
+            overflow: hidden;
+        }
+        
+        .fabric-image {
+            width: 100%;
+            height: 10rem;
+            background: #f5f5f4;
+            overflow: hidden;
+        }
+        
+        .fabric-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .fabric-content {
+            padding: 1rem;
+        }
+        
+        .fabric-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #292524;
+            margin-bottom: 0.75rem;
+        }
+        
+        .fabric-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.8125rem;
+            color: #57534e;
+        }
+        
+        .fabric-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        /* Order Card - Mobile optimized */
+        .order-card {
+            border: 2px solid #e7e5e4;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+        
+        .order-card:active {
+            border-color: #8b7460;
+        }
+        
+        .order-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        
+        .order-details {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e7e5e4;
+        }
+        
+        /* Image Grid - Mobile optimized */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .image-preview {
+            position: relative;
+            width: 100%;
+            height: 5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .image-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-remove {
+            position: absolute;
+            top: 0.25rem;
+            right: 0.25rem;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 1.75rem;
+            height: 1.75rem;
+            cursor: pointer;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #a8a29e;
+        }
+        
+        .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Summary Section */
+        .summary-section {
+            background: #fafaf9;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0.75rem;
+            border-top: 2px solid #d6d3d1;
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        
+        /* Modal/Overlay for export */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        
+        .modal {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        /* Utility Classes */
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+        .space-y-4 > * + * { margin-top: 1rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        .space-y-8 > * + * { margin-top: 2rem; }
+        
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1rem; }
+        
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .text-sm { font-size: 0.875rem; }
+        .text-xs { font-size: 0.75rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        
+        .text-gray { color: #78716c; }
+        .text-green { color: #16a34a; }
+        .text-green-600 { color: #16a34a; }
+        .text-red { color: #dc2626; }
+        
+        .border-t { border-top: 1px solid #e7e5e4; }
+        .border-b { border-bottom: 1px solid #e7e5e4; }
+        .pt-4 { padding-top: 1rem; }
+        .pt-6 { padding-top: 1.5rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        
+        .flex-1 { flex: 1; }
+        .w-full { width: 100%; }
+        .hidden { display: none; }
+        
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Success message */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #16a34a;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        /* iOS Safe Area */
+        @supports (padding: env(safe-area-inset-bottom)) {
+            .main {
+                padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        
+        // Utility functions
+        const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('cs-CZ', { style: 'currency', currency: 'CZK' }).format(amount);
+        };
+        
+        const formatDate = (date) => {
+            return new Date(date).toLocaleDateString('cs-CZ');
+        };
+
+        // Toast notification component
+        const Toast = ({ message, onClose }) => {
+            useEffect(() => {
+                const timer = setTimeout(onClose, 3000);
+                return () => clearTimeout(timer);
+            }, [onClose]);
+
+            return (
+                <div className="toast">
+                    {message}
+                </div>
+            );
+        };
+
+        // LocalStorage hooks
+        const useLocalStorage = (key, initialValue) => {
+            const [storedValue, setStoredValue] = useState(() => {
+                try {
+                    const item = window.localStorage.getItem(key);
+                    return item ? JSON.parse(item) : initialValue;
+                } catch (error) {
+                    console.error(error);
+                    return initialValue;
+                }
+            });
+
+            const setValue = (value) => {
+                try {
+                    const valueToStore = value instanceof Function ? value(storedValue) : value;
+                    setStoredValue(valueToStore);
+                    window.localStorage.setItem(key, JSON.stringify(valueToStore));
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+
+            return [storedValue, setValue];
+        };
+
+        // Helper functions
+        const calculateOrderTotal = (order) => {
+            // Return sale price if available, otherwise calculate from old margin system for backwards compatibility
+            if (order.salePrice) {
+                return order.salePrice;
+            }
+            // Fallback for old orders with margin
+            const fabricsCost = order.fabrics?.reduce((sum, f) => sum + f.totalCost, 0) || 0;
+            const decorationsCost = order.decorations?.reduce((sum, d) => sum + d.totalCost, 0) || 0;
+            const prepCost = (order.preparationTime || 0) * (order.preparationRate || 0);
+            const seamCost = order.seamstressPrice || ((order.seamstressTime || 0) * (order.seamstressRate || 0));
+            const extraCost = order.extras?.reduce((sum, e) => sum + e.price, 0) || 0;
+            const subtotal = fabricsCost + decorationsCost + prepCost + seamCost + extraCost;
+            const margin = order.margin || 0;
+            return subtotal * (1 + margin / 100);
+        };
+
+        const calculateOrderCosts = (order) => {
+            const fabricsCost = order.fabrics?.reduce((sum, f) => sum + f.totalCost, 0) || 0;
+            const decorationsCost = order.decorations?.reduce((sum, d) => sum + d.totalCost, 0) || 0;
+            const basicsCost = order.basics?.reduce((sum, b) => sum + b.totalCost, 0) || 0;
+            const prepCost = (order.preparationTime || 0) * (order.preparationRate || 0);
+            // Use seamstressPrice if available, otherwise calculate from time * rate (backwards compatibility)
+            const seamCost = order.seamstressPrice || ((order.seamstressTime || 0) * (order.seamstressRate || 0));
+            const extrasCost = order.extras?.reduce((sum, e) => sum + e.price, 0) || 0;
+            return fabricsCost + decorationsCost + basicsCost + prepCost + seamCost + extrasCost;
+        };
+
+        // Export/Import Modal Component
+        const ExportImportModal = ({ onClose, fabrics, setFabrics, decorations, setDecorations, orders, setOrders, rates, setRates }) => {
+            const exportData = () => {
+                const data = {
+                    version: '1.0',
+                    exportDate: new Date().toISOString(),
+                    fabrics,
+                    decorations,
+                    orders,
+                    rates
+                };
+                
+                const dataStr = JSON.stringify(data, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `atelier-backup-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            };
+
+            const importData = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const data = JSON.parse(event.target.result);
+                        if (data.version && data.fabrics && data.orders && data.rates) {
+                            if (window.confirm('Opravdu chcete importovat data? Současná data budou přepsána.')) {
+                                setFabrics(data.fabrics);
+                                setDecorations(data.decorations || []);
+                                setOrders(data.orders);
+                                setRates(data.rates);
+                                alert('✅ Data byla úspěšně importována!');
+                                onClose();
+                            }
+                        } else {
+                            alert('❌ Neplatný formát souboru!');
+                        }
+                    } catch (error) {
+                        alert('❌ Chyba při načítání souboru!');
+                    }
+                };
+                reader.readAsText(file);
+            };
+
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal" onClick={(e) => e.stopPropagation()}>
+                        <h3 className="modal-title">💾 Export / Import dat</h3>
+                        
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="font-semibold mb-2">Export dat</h4>
+                                <p className="text-sm text-gray mb-3">
+                                    Stáhněte všechna vaše data jako záložní soubor JSON
+                                </p>
+                                <button
+                                    onClick={exportData}
+                                    className="btn btn-primary w-full"
+                                >
+                                    📥 Stáhnout zálohu
+                                </button>
+                            </div>
+
+                            <div className="border-t pt-4">
+                                <h4 className="font-semibold mb-2">Import dat</h4>
+                                <p className="text-sm text-gray mb-3">
+                                    Nahrajte záložní soubor JSON
+                                </p>
+                                <input
+                                    type="file"
+                                    accept=".json"
+                                    onChange={importData}
+                                    className="form-input"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="modal-actions">
+                            <button
+                                onClick={onClose}
+                                className="btn btn-secondary flex-1"
+                            >
+                                Zavřít
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Main App Component
+        const AtelierManager = () => {
+            const [activeTab, setActiveTab] = useState('dashboard');
+            const [fabrics, setFabrics] = useLocalStorage('fabrics', []);
+            const [decorations, setDecorations] = useLocalStorage('decorations', []);
+            const [basics, setBasics] = useLocalStorage('basics', []);
+            const [orders, setOrders] = useLocalStorage('orders', []);
+            const [rates, setRates] = useLocalStorage('rates', {
+                preparation: 500,
+                seamstress: 400
+            });
+            const [logo, setLogo] = useLocalStorage('appLogo', '✂️');
+            const [showExportModal, setShowExportModal] = useState(false);
+            const [showBackupReminder, setShowBackupReminder] = useState(false);
+            const [toast, setToast] = useState(null);
+
+            // Check if backup reminder should be shown (every 7 days)
+            React.useEffect(() => {
+                const lastBackupReminder = localStorage.getItem('last-backup-reminder');
+                const now = new Date().getTime();
+                const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+                if (!lastBackupReminder || (now - parseInt(lastBackupReminder)) > sevenDays) {
+                    // Show reminder after 3 seconds (so user sees the app first)
+                    setTimeout(() => {
+                        setShowBackupReminder(true);
+                    }, 3000);
+                }
+            }, []);
+
+            const handleDownloadBackup = () => {
+                const data = {
+                    version: '1.0',
+                    exportDate: new Date().toISOString(),
+                    fabrics,
+                    decorations,
+                    basics,
+                    orders,
+                    rates
+                };
+                
+                const dataStr = JSON.stringify(data, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `atelier-backup-${new Date().toISOString().split('T')[0]}.json`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                
+                // Update last backup reminder timestamp
+                localStorage.setItem('last-backup-reminder', new Date().getTime().toString());
+                setShowBackupReminder(false);
+                showToast('✅ Záloha stažena');
+            };
+
+            const handleDismissReminder = () => {
+                // Update timestamp so it shows again in 7 days
+                localStorage.setItem('last-backup-reminder', new Date().getTime().toString());
+                setShowBackupReminder(false);
+            };
+
+            // Periodic auto-backup to localStorage (every 5 minutes)
+            React.useEffect(() => {
+                const autoBackup = () => {
+                    const data = {
+                        version: '1.0',
+                        exportDate: new Date().toISOString(),
+                        fabrics,
+                        decorations,
+                        basics,
+                        orders,
+                        rates
+                    };
+                    localStorage.setItem('atelier-auto-backup', JSON.stringify(data));
+                    console.log('Auto-backup saved to localStorage at', new Date().toLocaleTimeString());
+                };
+
+                // Initial backup
+                autoBackup();
+
+                // Backup every 5 minutes
+                const intervalId = setInterval(autoBackup, 5 * 60 * 1000);
+                
+                return () => {
+                    clearInterval(intervalId);
+                };
+            }, [fabrics, decorations, basics, orders, rates]);
+
+
+            const showToast = (message) => {
+                setToast(message);
+            };
+
+            const tabs = [
+                { id: 'dashboard', label: '📊 Přehled' },
+                { id: 'inventory', label: '📦 Sklad' },
+                { id: 'orders', label: '🛍️ Zakázky' },
+                { id: 'history', label: '📜 Historie' },
+                { id: 'settings', label: '⚙️ Nastavení' }
+            ];
+
+            return (
+                <div>
+                    {/* Header */}
+                    <header className="header">
+                        <div className="container">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h1 className="heading-font" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+                                        {logo.startsWith('data:') ? (
+                                            <img src={logo} alt="Logo" style={{height: '2rem', width: 'auto', objectFit: 'contain'}} />
+                                        ) : (
+                                            <span>{logo}</span>
+                                        )}
+                                        <span>Atelier</span>
+                                    </h1>
+                                    <p>Správa šití</p>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Navigation */}
+                    <nav className="nav">
+                        <div className="container">
+                            <ul className="nav-list">
+                                {tabs.map(tab => (
+                                    <li key={tab.id}>
+                                        <button
+                                            onClick={() => setActiveTab(tab.id)}
+                                            className={`nav-button ${activeTab === tab.id ? 'active' : ''}`}
+                                        >
+                                            {tab.label}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </nav>
+
+                    {/* Main Content */}
+                    <main className="main">
+                        <div className="container">
+                            {activeTab === 'dashboard' && (
+                                <Dashboard orders={orders} fabrics={fabrics} decorations={decorations} basics={basics} />
+                            )}
+                            {activeTab === 'inventory' && (
+                                <Inventory fabrics={fabrics} setFabrics={setFabrics} decorations={decorations} setDecorations={setDecorations} basics={basics} setBasics={setBasics} orders={orders} showToast={showToast} />
+                            )}
+                            {activeTab === 'orders' && (
+                                <Orders 
+                                    orders={orders} 
+                                    setOrders={setOrders} 
+                                    fabrics={fabrics}
+                                    decorations={decorations}
+                                    basics={basics}
+                                    rates={rates}
+                                    showToast={showToast}
+                                />
+                            )}
+                            {activeTab === 'history' && (
+                                <History orders={orders} setOrders={setOrders} showToast={showToast} />
+                            )}
+                            {activeTab === 'settings' && (
+                                <Settings 
+                                    rates={rates} 
+                                    setRates={setRates}
+                                    fabrics={fabrics}
+                                    decorations={decorations}
+                                    orders={orders}
+                                    logo={logo}
+                                    setLogo={setLogo}
+                                    showToast={showToast}
+                                />
+                            )}
+                        </div>
+                    </main>
+
+                    {/* Export/Import Modal */}
+                    {showExportModal && (
+                        <ExportImportModal
+                            onClose={() => setShowExportModal(false)}
+                            fabrics={fabrics}
+                            setFabrics={setFabrics}
+                            decorations={decorations}
+                            setDecorations={setDecorations}
+                            orders={orders}
+                            setOrders={setOrders}
+                            rates={rates}
+                            setRates={setRates}
+                        />
+                    )}
+
+                    {/* Backup Reminder Modal */}
+                    {showBackupReminder && (
+                        <div className="modal-overlay" onClick={handleDismissReminder}>
+                            <div className="modal" onClick={(e) => e.stopPropagation()} style={{maxWidth: '400px'}}>
+                                <div className="text-center mb-4">
+                                    <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📥</div>
+                                    <h3 className="font-semibold text-lg mb-2">
+                                        Nezapomeňte stáhnout zálohu
+                                    </h3>
+                                    <p className="text-sm text-gray">
+                                        Pravidelné zálohování chrání vaše data. Doporučujeme stahovat zálohu alespoň jednou za týden.
+                                    </p>
+                                    {(() => {
+                                        const lastBackup = localStorage.getItem('last-backup-reminder');
+                                        if (lastBackup) {
+                                            const days = Math.floor((new Date().getTime() - parseInt(lastBackup)) / (24 * 60 * 60 * 1000));
+                                            return (
+                                                <p className="text-xs text-gray mt-2">
+                                                    Poslední připomínka: před {days} {days === 1 ? 'dnem' : days < 5 ? 'dny' : 'dny'}
+                                                </p>
+                                            );
+                                        }
+                                        return null;
+                                    })()}
+                                </div>
+                                <div className="flex gap-2">
+                                    <button
+                                        onClick={handleDismissReminder}
+                                        className="btn btn-secondary flex-1"
+                                    >
+                                        Později
+                                    </button>
+                                    <button
+                                        onClick={handleDownloadBackup}
+                                        className="btn btn-primary flex-1"
+                                    >
+                                        📥 Stáhnout teď
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Toast Notification */}
+                    {toast && (
+                        <Toast message={toast} onClose={() => setToast(null)} />
+                    )}
+                </div>
+            );
+        };
+
+        // Dashboard Component
+        const Dashboard = ({ orders, fabrics, decorations, basics }) => {
+            const activeOrders = orders.filter(o => o.status === 'active');
+            const completedOrders = orders.filter(o => o.status === 'completed');
+            
+            const totalRevenue = completedOrders.reduce((sum, order) => {
+                const total = calculateOrderTotal(order);
+                return sum + total;
+            }, 0);
+            
+            const totalCosts = completedOrders.reduce((sum, order) => {
+                const costs = calculateOrderCosts(order);
+                return sum + costs;
+            }, 0);
+            
+            const totalProfit = totalRevenue - totalCosts;
+
+            const stats = [
+                { label: 'Aktivní zakázky', value: activeOrders.length, icon: '🛍️' },
+                { label: 'Dokončené', value: completedOrders.length, icon: '✅' },
+                { label: 'Celkový obrat', value: formatCurrency(totalRevenue), icon: '📈' },
+                { label: 'Celkový zisk', value: formatCurrency(totalProfit), icon: '💰' }
+            ];
+
+            return (
+                <div className="fade-in space-y-6">
+                    {/* Stats Grid */}
+                    <div className="grid grid-4">
+                        {stats.map((stat, index) => (
+                            <div key={index} className="stat-card">
+                                <div className="stat-icon text-center">{stat.icon}</div>
+                                <p className="stat-label text-center">{stat.label}</p>
+                                <p className="stat-value text-center">{stat.value}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Recent Orders */}
+                    <div className="card">
+                        <h2 className="text-lg heading-font font-semibold mb-3">
+                            Poslední zakázky
+                        </h2>
+                        {orders.length === 0 ? (
+                            <div className="empty-state">
+                                <div className="empty-icon">📭</div>
+                                <p>Zatím nemáte žádné zakázky</p>
+                            </div>
+                        ) : (
+                            <div className="space-y-2">
+                                {orders.slice(0, 5).map(order => (
+                                    <div key={order.id} className="list-item">
+                                        <div className="flex items-center justify-between gap-3">
+                                            <div className="flex items-center gap-2 flex-1 min-w-0">
+                                                <div className="text-xl">
+                                                    {order.status === 'active' ? '⏳' : '✅'}
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="font-medium text-sm truncate">{order.name}</p>
+                                                    <p className="text-xs text-gray">{formatDate(order.createdAt)}</p>
+                                                </div>
+                                            </div>
+                                            <div className="text-right">
+                                                <p className="font-semibold text-sm">
+                                                    {formatCurrency(calculateOrderTotal(order))}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Fabric Inventory Summary */}
+                    <div className="card text-center">
+                        <h2 className="text-lg heading-font font-semibold mb-3">
+                            📦 Přehled skladu
+                        </h2>
+                        <div className="grid grid-2 gap-3 mb-3">
+                            <div>
+                                <div className="text-2xl font-bold mb-1">
+                                    {fabrics.length}
+                                </div>
+                                <p className="text-xs text-gray mb-2">Druhů látek</p>
+                                <div className="text-lg font-semibold text-gray">
+                                    {formatCurrency(fabrics.reduce((sum, f) => sum + (f.pricePerM2 * f.quantity), 0))}
+                                </div>
+                                <p className="text-xs text-gray">Hodnota látek</p>
+                            </div>
+                            <div>
+                                <div className="text-2xl font-bold mb-1">
+                                    {decorations?.length || 0}
+                                </div>
+                                <p className="text-xs text-gray mb-2">Druhů zdobení</p>
+                                <div className="text-lg font-semibold text-gray">
+                                    {formatCurrency((decorations || []).reduce((sum, d) => sum + (d.price * d.quantity), 0))}
+                                </div>
+                                <p className="text-xs text-gray">Hodnota zdobení</p>
+                            </div>
+                        </div>
+                        <div className="border-t pt-2">
+                            <div className="text-xl font-semibold text-gray mb-1">
+                                {formatCurrency(
+                                    fabrics.reduce((sum, f) => sum + (f.pricePerM2 * f.quantity), 0) +
+                                    (decorations || []).reduce((sum, d) => sum + (d.price * d.quantity), 0)
+                                )}
+                            </div>
+                            <p className="text-xs text-gray">Celková hodnota skladu</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Inventory Component
+        const Inventory = ({ fabrics, setFabrics, decorations, setDecorations, basics, setBasics, orders, showToast }) => {
+            const [inventoryTab, setInventoryTab] = useState('fabrics');
+            const [showForm, setShowForm] = useState(false);
+            const [editingId, setEditingId] = useState(null);
+            const [formData, setFormData] = useState({
+                name: '',
+                type: '',
+                quantity: '',
+                pricePerM2: '',
+                color: '',
+                image: '',
+                unit: 'ks' // for decorations
+            });
+
+            // Helper function to check if item is used in active orders
+            const isItemUsedInOrders = (itemId, type) => {
+                return orders?.filter(o => o.status === 'active').some(order => {
+                    if (type === 'fabric') {
+                        return order.fabrics?.some(f => f.fabricId === itemId);
+                    } else {
+                        return order.decorations?.some(d => d.decorationId === itemId);
+                    }
+                });
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                
+                if (inventoryTab === 'fabrics') {
+                    const fabricData = {
+                        ...formData,
+                        id: editingId || Date.now().toString(),
+                        quantity: parseFloat(formData.quantity),
+                        pricePerM2: parseFloat(formData.pricePerM2),
+                        createdAt: editingId ? fabrics.find(f => f.id === editingId)?.createdAt : new Date().toISOString()
+                    };
+
+                    if (editingId) {
+                        setFabrics(fabrics.map(f => f.id === editingId ? fabricData : f));
+                        showToast('✅ Látka aktualizována');
+                    } else {
+                        setFabrics([...fabrics, fabricData]);
+                        showToast('✅ Látka přidána');
+                    }
+                } else if (inventoryTab === 'decorations') {
+                    // Decorations
+                    const decorationData = {
+                        id: editingId || Date.now().toString(),
+                        name: formData.name,
+                        color: formData.color,
+                        price: parseFloat(formData.pricePerM2), // reusing this field for decoration price
+                        quantity: parseFloat(formData.quantity),
+                        unit: formData.unit || 'ks',
+                        image: formData.image,
+                        createdAt: editingId ? decorations.find(d => d.id === editingId)?.createdAt : new Date().toISOString()
+                    };
+
+                    if (editingId) {
+                        setDecorations(decorations.map(d => d.id === editingId ? decorationData : d));
+                        showToast('✅ Zdobení aktualizováno');
+                    } else {
+                        setDecorations([...decorations, decorationData]);
+                        showToast('✅ Zdobení přidáno');
+                    }
+                } else {
+                    // Basics
+                    const basicData = {
+                        id: editingId || Date.now().toString(),
+                        name: formData.name,
+                        color: formData.color,
+                        price: parseFloat(formData.pricePerM2), // reusing this field for basic price
+                        quantity: parseFloat(formData.quantity),
+                        unit: formData.unit || 'ks',
+                        image: formData.image,
+                        createdAt: editingId ? basics.find(b => b.id === editingId)?.createdAt : new Date().toISOString()
+                    };
+
+                    if (editingId) {
+                        setBasics(basics.map(b => b.id === editingId ? basicData : b));
+                        showToast('✅ Basic aktualizován');
+                    } else {
+                        setBasics([...basics, basicData]);
+                        showToast('✅ Basic přidán');
+                    }
+                }
+
+                resetForm();
+            };
+
+            const handleEdit = (item, type) => {
+                if (type === 'fabric') {
+                    setFormData(item);
+                    setInventoryTab('fabrics');
+                } else if (type === 'decoration') {
+                    setFormData({
+                        name: item.name,
+                        color: item.color,
+                        quantity: item.quantity.toString(),
+                        pricePerM2: item.price.toString(),
+                        unit: item.unit || 'ks',
+                        image: item.image || '',
+                        type: ''
+                    });
+                    setInventoryTab('decorations');
+                } else {
+                    // basic
+                    setFormData({
+                        name: item.name,
+                        color: item.color,
+                        quantity: item.quantity.toString(),
+                        pricePerM2: item.price.toString(),
+                        unit: item.unit || 'ks',
+                        image: item.image || '',
+                        type: ''
+                    });
+                    setInventoryTab('basics');
+                }
+                setEditingId(item.id);
+                setShowForm(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const handleDelete = (id, type) => {
+                if (window.confirm(`Opravdu chcete smazat tuto položku?`)) {
+                    if (type === 'fabric') {
+                        setFabrics(fabrics.filter(f => f.id !== id));
+                        showToast('✅ Látka smazána');
+                    } else if (type === 'decoration') {
+                        setDecorations(decorations.filter(d => d.id !== id));
+                        showToast('✅ Zdobení smazáno');
+                    } else {
+                        setBasics(basics.filter(b => b.id !== id));
+                        showToast('✅ Basic smazán');
+                    }
+                }
+            };
+
+            const resetForm = () => {
+                setFormData({
+                    name: '',
+                    type: '',
+                    quantity: '',
+                    pricePerM2: '',
+                    color: '',
+                    image: '',
+                    unit: 'ks'
+                });
+                setEditingId(null);
+                setShowForm(false);
+            };
+
+            const handleImageUpload = (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    if (file.size > 2000000) {
+                        alert('⚠️ Obrázek je příliš velký (max 2MB)');
+                        return;
+                    }
+                    const reader = new FileReader();
+                    reader.onloadend = () => {
+                        setFormData({ ...formData, image: reader.result });
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+
+            return (
+                <div className="fade-in space-y-4">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-xl heading-font font-semibold">
+                            Sklad
+                        </h2>
+                        <button
+                            onClick={() => setShowForm(!showForm)}
+                            className="btn btn-primary btn-small"
+                        >
+                            {showForm ? '❌' : '➕'}
+                        </button>
+                    </div>
+
+                    {/* Tabs for Fabrics vs Decorations */}
+                    <div className="flex gap-2 bg-white rounded-lg p-1 card-shadow">
+                        <button
+                            onClick={() => {
+                                setInventoryTab('fabrics');
+                                setShowForm(false);
+                                resetForm();
+                            }}
+                            className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all ${
+                                inventoryTab === 'fabrics' 
+                                    ? 'bg-gradient-to-r from-stone-700 to-stone-600 text-white' 
+                                    : 'text-stone-600 hover:bg-stone-50'
+                            }`}
+                        >
+                            🧵 Látky
+                        </button>
+                        <button
+                            onClick={() => {
+                                setInventoryTab('decorations');
+                                setShowForm(false);
+                                resetForm();
+                            }}
+                            className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all ${
+                                inventoryTab === 'decorations' 
+                                    ? 'bg-gradient-to-r from-stone-700 to-stone-600 text-white' 
+                                    : 'text-stone-600 hover:bg-stone-50'
+                            }`}
+                        >
+                            ✨ Zdobení
+                        </button>
+                        <button
+                            onClick={() => {
+                                setInventoryTab('basics');
+                                setShowForm(false);
+                                resetForm();
+                            }}
+                            className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all ${
+                                inventoryTab === 'basics' 
+                                    ? 'bg-gradient-to-r from-stone-700 to-stone-600 text-white' 
+                                    : 'text-stone-600 hover:bg-stone-50'
+                            }`}
+                        >
+                            📦 Basic
+                        </button>
+                    </div>
+
+                    {/* Add/Edit Form */}
+                    {showForm && (
+                        <div className="card">
+                            <h3 className="font-semibold mb-4">
+                                {editingId 
+                                    ? `✏️ Upravit ${inventoryTab === 'fabrics' ? 'látku' : inventoryTab === 'decorations' ? 'zdobení' : 'basic'}` 
+                                    : `➕ Nová ${inventoryTab === 'fabrics' ? 'látka' : inventoryTab === 'decorations' ? 'zdobení' : 'basic'}`}
+                            </h3>
+                            <form onSubmit={handleSubmit}>
+                                <div className="space-y-3">
+                                    <div className="form-group">
+                                        <label className="form-label">Název *</label>
+                                        <input
+                                            type="text"
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                            className="form-input"
+                                            placeholder={inventoryTab === 'fabrics' ? 'např. Bavlněná látka' : inventoryTab === 'decorations' ? 'např. Krajka, Knoflíky' : 'např. Nitě, Zip'}
+                                        />
+                                    </div>
+
+                                    {inventoryTab === 'fabrics' && (
+                                        <div className="form-group">
+                                            <label className="form-label">Typ *</label>
+                                            <input
+                                                type="text"
+                                                required
+                                                value={formData.type}
+                                                onChange={(e) => setFormData({...formData, type: e.target.value})}
+                                                className="form-input"
+                                                placeholder="např. Bavlna, Hedvábí"
+                                            />
+                                        </div>
+                                    )}
+
+                                    <div className="grid grid-2 gap-3">
+                                        <div className="form-group">
+                                            <label className="form-label">
+                                                {inventoryTab === 'fabrics' ? 'Množství (m²) *' : 'Množství *'}
+                                            </label>
+                                            <input
+                                                type="number"
+                                                step="0.01"
+                                                required
+                                                value={formData.quantity}
+                                                onChange={(e) => setFormData({...formData, quantity: e.target.value})}
+                                                className="form-input"
+                                                placeholder="0.00"
+                                            />
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label className="form-label">
+                                                {inventoryTab === 'fabrics' ? 'Cena za m² (Kč) *' : 'Cena za kus/m (Kč) *'}
+                                            </label>
+                                            <input
+                                                type="number"
+                                                step="0.01"
+                                                required
+                                                value={formData.pricePerM2}
+                                                onChange={(e) => setFormData({...formData, pricePerM2: e.target.value})}
+                                                className="form-input"
+                                                placeholder="0.00"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {inventoryTab === 'decorations' && (
+                                        <div className="form-group">
+                                            <label className="form-label">Jednotka *</label>
+                                            <select
+                                                value={formData.unit}
+                                                onChange={(e) => setFormData({...formData, unit: e.target.value})}
+                                                className="form-select"
+                                                required
+                                            >
+                                                <option value="ks">kusy (ks)</option>
+                                                <option value="m">metry (m)</option>
+                                            </select>
+                                        </div>
+                                    )}
+
+                                    <div className="form-group">
+                                        <label className="form-label">Barva</label>
+                                        <input
+                                            type="text"
+                                            value={formData.color}
+                                            onChange={(e) => setFormData({...formData, color: e.target.value})}
+                                            className="form-input"
+                                            placeholder="např. Bílá, Zlatá"
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label className="form-label">Obrázek (max 2MB)</label>
+                                        <input
+                                            type="file"
+                                            accept="image/*"
+                                            onChange={handleImageUpload}
+                                            className="form-input"
+                                        />
+                                        {formData.image && (
+                                            <div className="mt-2">
+                                                <img src={formData.image} alt="Preview" style={{width: '100%', maxHeight: '150px', objectFit: 'cover', borderRadius: '0.5rem'}} />
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-2 mt-4">
+                                    <button
+                                        type="button"
+                                        onClick={resetForm}
+                                        className="btn btn-secondary flex-1"
+                                    >
+                                        Zrušit
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        className="btn btn-primary flex-1"
+                                    >
+                                        {editingId ? 'Uložit' : 'Přidat'}
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    )}
+
+                    {/* Items Grid - Fabrics */}
+                    {inventoryTab === 'fabrics' && (
+                        <>
+                            {fabrics.length === 0 ? (
+                                <div className="card">
+                                    <div className="empty-state">
+                                        <div className="empty-icon">📦</div>
+                                        <p>Zatím nemáte žádné látky na skladě</p>
+                                        <p className="text-xs mt-2">Klikněte na ➕ pro přidání</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="grid grid-2">
+                                    {fabrics.map(fabric => {
+                                        const isUsed = isItemUsedInOrders(fabric.id, 'fabric');
+                                        return (
+                                        <div key={fabric.id} className="fabric-card" style={{opacity: isUsed ? 0.7 : 1, position: 'relative'}}>
+                                            {isUsed && (
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '8px',
+                                                    right: '8px',
+                                                    background: '#ef4444',
+                                                    color: 'white',
+                                                    padding: '4px 8px',
+                                                    borderRadius: '6px',
+                                                    fontSize: '0.7rem',
+                                                    fontWeight: '600',
+                                                    zIndex: 10,
+                                                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                                                }}>
+                                                    🔒 Použito
+                                                </div>
+                                            )}
+                                            {fabric.image && (
+                                                <div className="fabric-image">
+                                                    <img src={fabric.image} alt={fabric.name} />
+                                                </div>
+                                            )}
+                                            <div className="fabric-content">
+                                                <h3 className="fabric-name">{fabric.name}</h3>
+                                                <div className="space-y-1">
+                                                    <div className="fabric-info">
+                                                        <span>Typ:</span>
+                                                        <span className="font-medium">{fabric.type}</span>
+                                                    </div>
+                                                    <div className="fabric-info">
+                                                        <span>Množství:</span>
+                                                        <span className="font-medium">{fabric.quantity} m²</span>
+                                                    </div>
+                                                    <div className="fabric-info">
+                                                        <span>Cena/m²:</span>
+                                                        <span className="font-medium">{formatCurrency(fabric.pricePerM2)}</span>
+                                                    </div>
+                                                    {fabric.color && (
+                                                        <div className="fabric-info">
+                                                            <span>Barva:</span>
+                                                            <span className="font-medium">{fabric.color}</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="fabric-info border-t pt-1 font-semibold">
+                                                        <span>Hodnota:</span>
+                                                        <span>{formatCurrency(fabric.quantity * fabric.pricePerM2)}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="fabric-actions">
+                                                    <button
+                                                        onClick={() => handleEdit(fabric, 'fabric')}
+                                                        className="btn btn-secondary flex-1 btn-small"
+                                                    >
+                                                        ✏️
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDelete(fabric.id, 'fabric')}
+                                                        className="btn btn-danger flex-1 btn-small"
+                                                        disabled={isUsed}
+                                                        style={{opacity: isUsed ? 0.5 : 1}}
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )})}
+                                </div>
+                            )}
+                        </>
+                    )}
+
+                    {/* Items Grid - Decorations */}
+                    {inventoryTab === 'decorations' && (
+                        <>
+                            {(!decorations || decorations.length === 0) ? (
+                                <div className="card">
+                                    <div className="empty-state">
+                                        <div className="empty-icon">✨</div>
+                                        <p>Zatím nemáte žádné zdobení na skladě</p>
+                                        <p className="text-xs mt-2">Klikněte na ➕ pro přidání</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="grid grid-2">
+                                    {decorations.map(decoration => {
+                                        const isUsed = isItemUsedInOrders(decoration.id, 'decoration');
+                                        return (
+                                        <div key={decoration.id} className="fabric-card" style={{opacity: isUsed ? 0.7 : 1, position: 'relative'}}>
+                                            {isUsed && (
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '8px',
+                                                    right: '8px',
+                                                    background: '#ef4444',
+                                                    color: 'white',
+                                                    padding: '4px 8px',
+                                                    borderRadius: '6px',
+                                                    fontSize: '0.7rem',
+                                                    fontWeight: '600',
+                                                    zIndex: 10,
+                                                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                                                }}>
+                                                    🔒 Použito
+                                                </div>
+                                            )}
+                                            {decoration.image && (
+                                                <div className="fabric-image">
+                                                    <img src={decoration.image} alt={decoration.name} />
+                                                </div>
+                                            )}
+                                            <div className="fabric-content">
+                                                <h3 className="fabric-name">{decoration.name}</h3>
+                                                <div className="space-y-1">
+                                                    <div className="fabric-info">
+                                                        <span>Množství:</span>
+                                                        <span className="font-medium">{decoration.quantity} {decoration.unit}</span>
+                                                    </div>
+                                                    <div className="fabric-info">
+                                                        <span>Cena/{decoration.unit}:</span>
+                                                        <span className="font-medium">{formatCurrency(decoration.price)}</span>
+                                                    </div>
+                                                    {decoration.color && (
+                                                        <div className="fabric-info">
+                                                            <span>Barva:</span>
+                                                            <span className="font-medium">{decoration.color}</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="fabric-info border-t pt-1 font-semibold">
+                                                        <span>Hodnota:</span>
+                                                        <span>{formatCurrency(decoration.quantity * decoration.price)}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="fabric-actions">
+                                                    <button
+                                                        onClick={() => handleEdit(decoration, 'decoration')}
+                                                        className="btn btn-secondary flex-1 btn-small"
+                                                    >
+                                                        ✏️
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDelete(decoration.id, 'decoration')}
+                                                        className="btn btn-danger flex-1 btn-small"
+                                                        disabled={isUsed}
+                                                        style={{opacity: isUsed ? 0.5 : 1}}
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )})}
+                                </div>
+                            )}
+                        </>
+                    )}
+
+                    {/* Items Grid - Basics */}
+                    {inventoryTab === 'basics' && (
+                        <>
+                            {(!basics || basics.length === 0) ? (
+                                <div className="card">
+                                    <div className="empty-state">
+                                        <div className="empty-icon">📦</div>
+                                        <p>Zatím nemáte žádné Basic na skladě</p>
+                                        <p className="text-xs mt-2">Klikněte na ➕ pro přidání</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="grid grid-2">
+                                    {basics.map(basic => {
+                                        const isUsed = isItemUsedInOrders(basic.id, 'basic');
+                                        return (
+                                        <div key={basic.id} className="fabric-card" style={{opacity: isUsed ? 0.7 : 1, position: 'relative'}}>
+                                            {isUsed && (
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '8px',
+                                                    right: '8px',
+                                                    background: '#ef4444',
+                                                    color: 'white',
+                                                    padding: '4px 8px',
+                                                    borderRadius: '6px',
+                                                    fontSize: '0.7rem',
+                                                    fontWeight: '600',
+                                                    zIndex: 10,
+                                                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                                                }}>
+                                                    🔒 Použito
+                                                </div>
+                                            )}
+                                            {basic.image && (
+                                                <div className="fabric-image">
+                                                    <img src={basic.image} alt={basic.name} />
+                                                </div>
+                                            )}
+                                            <div className="fabric-content">
+                                                <h3 className="fabric-name">{basic.name}</h3>
+                                                <div className="space-y-1">
+                                                    <div className="fabric-info">
+                                                        <span>Množství:</span>
+                                                        <span className="font-medium">{basic.quantity} {basic.unit}</span>
+                                                    </div>
+                                                    <div className="fabric-info">
+                                                        <span>Cena/{basic.unit}:</span>
+                                                        <span className="font-medium">{formatCurrency(basic.price)}</span>
+                                                    </div>
+                                                    {basic.color && (
+                                                        <div className="fabric-info">
+                                                            <span>Barva:</span>
+                                                            <span className="font-medium">{basic.color}</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="fabric-info border-t pt-1 font-semibold">
+                                                        <span>Hodnota:</span>
+                                                        <span>{formatCurrency(basic.quantity * basic.price)}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="fabric-actions">
+                                                    <button
+                                                        onClick={() => handleEdit(basic, 'basic')}
+                                                        className="btn btn-secondary flex-1 btn-small"
+                                                    >
+                                                        ✏️
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDelete(basic.id, 'basic')}
+                                                        className="btn btn-danger flex-1 btn-small"
+                                                        disabled={isUsed}
+                                                        style={{opacity: isUsed ? 0.5 : 1}}
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )})}
+                                </div>
+                            )}
+                        </>
+                    )}
+                </div>
+            );
+        };
+
+        // Orders Component
+        const Orders = ({ orders, setOrders, fabrics, decorations, basics, rates, showToast }) => {
+            const [showForm, setShowForm] = useState(false);
+            const [editingId, setEditingId] = useState(null);
+            const [searchTerm, setSearchTerm] = useState('');
+            const [saveStatus, setSaveStatus] = useState('saved'); // 'saved', 'saving', 'error'
+            const [formData, setFormData] = useState({
+                name: '',
+                customer: '',
+                preparationTime: '',
+                seamstressTime: '',
+                seamstressPrice: '',
+                salePrice: '',
+                selectedFabrics: [],
+                selectedDecorations: [],
+                selectedBasics: [],
+                extras: [],
+                images: [],
+                notes: '',
+                color: '#8b7460'
+            });
+
+            // Auto-save with debouncing (1 second delay)
+            React.useEffect(() => {
+                // Only auto-save if form is open and has required fields
+                if (!showForm || !formData.customer || !formData.name) {
+                    return;
+                }
+
+                setSaveStatus('saving');
+                
+                // Debounce: wait 1 second after last change
+                const timeoutId = setTimeout(() => {
+                    try {
+                        handleAutoSave();
+                        setSaveStatus('saved');
+                    } catch (error) {
+                        setSaveStatus('error');
+                        console.error('Auto-save error:', error);
+                    }
+                }, 1000);
+
+                return () => clearTimeout(timeoutId);
+            }, [formData, showForm]);
+
+            const handleAutoSave = () => {
+                if (!formData.customer || !formData.name) {
+                    return;
+                }
+
+                const orderData = {
+                    ...formData,
+                    id: editingId || Date.now().toString(),
+                    preparationTime: parseFloat(formData.preparationTime) || 0,
+                    seamstressTime: parseFloat(formData.seamstressTime) || 0,
+                    seamstressPrice: parseFloat(formData.seamstressPrice) || 0,
+                    salePrice: parseFloat(formData.salePrice) || 0,
+                    preparationRate: rates.preparation,
+                    seamstressRate: rates.seamstress,
+                    status: editingId ? orders.find(o => o.id === editingId)?.status || 'active' : 'active',
+                    createdAt: editingId ? orders.find(o => o.id === editingId)?.createdAt : new Date().toISOString(),
+                    completedAt: editingId ? orders.find(o => o.id === editingId)?.completedAt : null
+                };
+
+                orderData.fabrics = orderData.selectedFabrics.map(sf => {
+                    const fabric = fabrics.find(f => f.id === sf.fabricId);
+                    return {
+                        ...sf,
+                        fabricId: sf.fabricId,
+                        name: fabric?.name,
+                        pricePerM2: fabric?.pricePerM2,
+                        totalCost: sf.quantity * (fabric?.pricePerM2 || 0)
+                    };
+                });
+
+                orderData.decorations = orderData.selectedDecorations.map(sd => {
+                    const decoration = decorations?.find(d => d.id === sd.decorationId);
+                    return {
+                        ...sd,
+                        decorationId: sd.decorationId,
+                        name: decoration?.name,
+                        price: decoration?.price,
+                        unit: decoration?.unit,
+                        totalCost: sd.quantity * (decoration?.price || 0)
+                    };
+                });
+
+                orderData.basics = (orderData.selectedBasics || []).map(sb => {
+                    const basic = basics?.find(b => b.id === sb.basicId);
+                    return {
+                        ...sb,
+                        basicId: sb.basicId,
+                        name: basic?.name,
+                        price: basic?.price,
+                        unit: basic?.unit,
+                        totalCost: sb.quantity * (basic?.price || 0)
+                    };
+                });
+
+                if (editingId) {
+                    setOrders(orders.map(o => o.id === editingId ? orderData : o));
+                } else {
+                    // For new orders, check if already exists
+                    const existingOrder = orders.find(o => o.id === orderData.id);
+                    if (existingOrder) {
+                        setOrders(orders.map(o => o.id === orderData.id ? orderData : o));
+                    } else {
+                        setOrders([...orders, orderData]);
+                        setEditingId(orderData.id); // Set editing ID so next save updates
+                    }
+                }
+            };
+
+            // Color palette for orders
+            const orderColors = [
+                { name: 'Hnědá', value: '#8b7460', light: '#f5f1eb' },
+                { name: 'Modrá', value: '#3b82f6', light: '#dbeafe' },
+                { name: 'Zelená', value: '#10b981', light: '#d1fae5' },
+                { name: 'Červená', value: '#ef4444', light: '#fee2e2' },
+                { name: 'Fialová', value: '#8b5cf6', light: '#ede9fe' },
+                { name: 'Růžová', value: '#ec4899', light: '#fce7f3' },
+                { name: 'Oranžová', value: '#f59e0b', light: '#fef3c7' },
+                { name: 'Šedá', value: '#6b7280', light: '#f3f4f6' }
+            ];
+
+
+            const handleEdit = (order) => {
+                setFormData({
+                    name: order.name,
+                    customer: order.customer || '',
+                    preparationTime: order.preparationTime.toString(),
+                    seamstressTime: order.seamstressTime.toString(),
+                    seamstressPrice: order.seamstressPrice ? order.seamstressPrice.toString() : '',
+                    salePrice: order.salePrice ? order.salePrice.toString() : '',
+                    selectedFabrics: order.fabrics?.map(f => ({
+                        fabricId: f.fabricId || fabrics.find(fab => fab.name === f.name)?.id || '',
+                        quantity: f.quantity
+                    })) || [],
+                    selectedDecorations: order.decorations?.map(d => ({
+                        decorationId: d.decorationId || decorations?.find(dec => dec.name === d.name)?.id || '',
+                        quantity: d.quantity
+                    })) || [],
+                    selectedBasics: order.basics?.map(b => ({
+                        basicId: b.basicId || basics?.find(basic => basic.name === b.name)?.id || '',
+                        quantity: b.quantity
+                    })) || [],
+                    extras: order.extras || [],
+                    images: order.images || [],
+                    notes: order.notes || '',
+                    color: order.color || '#8b7460'
+                });
+                setEditingId(order.id);
+                setShowForm(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const resetForm = () => {
+                setFormData({
+                    name: '',
+                    customer: '',
+                    preparationTime: '',
+                    seamstressTime: '',
+                    seamstressPrice: '',
+                    salePrice: '',
+                    selectedFabrics: [],
+                    selectedDecorations: [],
+                    selectedBasics: [],
+                    extras: [],
+                    images: [],
+                    notes: '',
+                    color: '#8b7460'
+                });
+                setEditingId(null);
+                setShowForm(false);
+            };
+
+            const addDecoration = () => {
+                setFormData({
+                    ...formData,
+                    selectedDecorations: [...formData.selectedDecorations, { decorationId: '', quantity: '' }]
+                });
+            };
+
+            const removeDecoration = (index) => {
+                setFormData({
+                    ...formData,
+                    selectedDecorations: formData.selectedDecorations.filter((_, i) => i !== index)
+                });
+            };
+
+            const updateDecoration = (index, field, value) => {
+                const updated = [...formData.selectedDecorations];
+                updated[index] = { ...updated[index], [field]: value };
+                setFormData({ ...formData, selectedDecorations: updated });
+            };
+
+            const addBasic = () => {
+                setFormData({
+                    ...formData,
+                    selectedBasics: [...formData.selectedBasics, { basicId: '', quantity: '' }]
+                });
+            };
+
+            const removeBasic = (index) => {
+                setFormData({
+                    ...formData,
+                    selectedBasics: formData.selectedBasics.filter((_, i) => i !== index)
+                });
+            };
+
+            const updateBasic = (index, field, value) => {
+                const updated = [...formData.selectedBasics];
+                updated[index] = { ...updated[index], [field]: value };
+                setFormData({ ...formData, selectedBasics: updated });
+            };
+
+            const addFabric = () => {
+                setFormData({
+                    ...formData,
+                    selectedFabrics: [...formData.selectedFabrics, { fabricId: '', quantity: '' }]
+                });
+            };
+
+            const removeFabric = (index) => {
+                setFormData({
+                    ...formData,
+                    selectedFabrics: formData.selectedFabrics.filter((_, i) => i !== index)
+                });
+            };
+
+            const updateFabric = (index, field, value) => {
+                const updated = [...formData.selectedFabrics];
+                updated[index] = { ...updated[index], [field]: value };
+                setFormData({ ...formData, selectedFabrics: updated });
+            };
+
+            const addExtra = () => {
+                setFormData({
+                    ...formData,
+                    extras: [...formData.extras, { name: '', price: '' }]
+                });
+            };
+
+            const removeExtra = (index) => {
+                setFormData({
+                    ...formData,
+                    extras: formData.extras.filter((_, i) => i !== index)
+                });
+            };
+
+            const updateExtra = (index, field, value) => {
+                const updated = [...formData.extras];
+                updated[index] = { ...updated[index], [field]: value };
+                setFormData({ ...formData, extras: updated });
+            };
+
+            const handleImageUpload = (e) => {
+                const files = Array.from(e.target.files);
+                if (files.length + formData.images.length > 6) {
+                    alert('⚠️ Maximálně 6 obrázků');
+                    return;
+                }
+                
+                const readers = files.map(file => {
+                    if (file.size > 2000000) {
+                        alert('⚠️ Některé obrázky jsou příliš velké (max 2MB)');
+                        return Promise.resolve(null);
+                    }
+                    return new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => resolve(reader.result);
+                        reader.readAsDataURL(file);
+                    });
+                });
+
+                Promise.all(readers).then(images => {
+                    const validImages = images.filter(img => img !== null);
+                    setFormData({
+                        ...formData,
+                        images: [...formData.images, ...validImages]
+                    });
+                });
+            };
+
+            const removeImage = (index) => {
+                setFormData({
+                    ...formData,
+                    images: formData.images.filter((_, i) => i !== index)
+                });
+            };
+
+            const calculateTotal = () => {
+                const fabricsCost = formData.selectedFabrics.reduce((sum, sf) => {
+                    const fabric = fabrics.find(f => f.id === sf.fabricId);
+                    return sum + (parseFloat(sf.quantity) || 0) * (fabric?.pricePerM2 || 0);
+                }, 0);
+
+                const decorationsCost = formData.selectedDecorations.reduce((sum, sd) => {
+                    const decoration = decorations?.find(d => d.id === sd.decorationId);
+                    return sum + (parseFloat(sd.quantity) || 0) * (decoration?.price || 0);
+                }, 0);
+
+                const basicsCost = (formData.selectedBasics || []).reduce((sum, sb) => {
+                    const basic = basics?.find(b => b.id === sb.basicId);
+                    return sum + (parseFloat(sb.quantity) || 0) * (basic?.price || 0);
+                }, 0);
+
+                const prepCost = (parseFloat(formData.preparationTime) || 0) * rates.preparation;
+                const seamCost = parseFloat(formData.seamstressPrice) || 0;
+                const extrasCost = formData.extras.reduce((sum, e) => sum + (parseFloat(e.price) || 0), 0);
+                const totalCosts = fabricsCost + decorationsCost + basicsCost + prepCost + seamCost + extrasCost;
+                
+                const salePrice = parseFloat(formData.salePrice) || 0;
+                const marginAmount = salePrice - totalCosts;
+                const marginPercent = totalCosts > 0 ? (marginAmount / totalCosts) * 100 : 0;
+
+                return { 
+                    fabricsCost, 
+                    decorationsCost, 
+                    basicsCost,
+                    prepCost, 
+                    seamCost, 
+                    extrasCost, 
+                    totalCosts, 
+                    salePrice,
+                    marginAmount,
+                    marginPercent
+                };
+            };
+
+            const costs = calculateTotal();
+
+            return (
+                <div className="fade-in space-y-4">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-xl heading-font font-semibold">
+                            Zakázky
+                        </h2>
+                        <button
+                            onClick={() => {
+                                setShowForm(!showForm);
+                                if (!showForm) window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="btn btn-primary btn-small"
+                        >
+                            {showForm ? '❌' : '➕'}
+                        </button>
+                    </div>
+
+                    {/* Order Form */}
+                    {showForm && (
+                        <div className="card">
+                            <h3 className="font-semibold mb-4">
+                                {editingId ? '✏️ Upravit zakázku' : '➕ Nová zakázka'}
+                            </h3>
+                            <div>
+                                <div className="space-y-3">
+                                    <div className="form-group">
+                                        <label className="form-label">Jméno zákazníka *</label>
+                                        <input
+                                            type="text"
+                                            required
+                                            value={formData.customer}
+                                            onChange={(e) => setFormData({...formData, customer: e.target.value})}
+                                            className="form-input"
+                                            placeholder="např. Jana Nováková"
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label className="form-label">Název zakázky *</label>
+                                        <input
+                                            type="text"
+                                            required
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({...formData, name: e.target.value})}
+                                            className="form-input"
+                                            placeholder="např. Svatební šaty"
+                                        />
+                                    </div>
+
+                                    {/* Fabrics Section */}
+                                    <div className="border-t pt-3">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h4 className="font-semibold text-sm">📦 Látky</h4>
+                                            <button
+                                                type="button"
+                                                onClick={addFabric}
+                                                className="btn btn-secondary btn-small"
+                                            >
+                                                ➕
+                                            </button>
+                                        </div>
+                                        {formData.selectedFabrics.map((sf, index) => (
+                                            <div key={index} className="space-y-2 mb-3 list-item">
+                                                <select
+                                                    value={sf.fabricId}
+                                                    onChange={(e) => updateFabric(index, 'fabricId', e.target.value)}
+                                                    className="form-select"
+                                                    required
+                                                >
+                                                    <option value="">Vyberte látku</option>
+                                                    {fabrics.map(fabric => (
+                                                        <option key={fabric.id} value={fabric.id}>
+                                                            {fabric.name} ({fabric.quantity} m²)
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                                <div className="flex gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="0.01"
+                                                        value={sf.quantity}
+                                                        onChange={(e) => updateFabric(index, 'quantity', e.target.value)}
+                                                        className="form-input flex-1"
+                                                        placeholder="m²"
+                                                        required
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeFabric(index)}
+                                                        className="btn btn-danger btn-small"
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Decorations Section */}
+                                    <div className="border-t pt-3">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h4 className="font-semibold text-sm">✨ Zdobení</h4>
+                                            <button
+                                                type="button"
+                                                onClick={addDecoration}
+                                                className="btn btn-secondary btn-small"
+                                            >
+                                                ➕
+                                            </button>
+                                        </div>
+                                        {formData.selectedDecorations.map((sd, index) => (
+                                            <div key={index} className="space-y-2 mb-3 list-item">
+                                                <select
+                                                    value={sd.decorationId}
+                                                    onChange={(e) => updateDecoration(index, 'decorationId', e.target.value)}
+                                                    className="form-select"
+                                                    required
+                                                >
+                                                    <option value="">Vyberte zdobení</option>
+                                                    {decorations?.map(decoration => (
+                                                        <option key={decoration.id} value={decoration.id}>
+                                                            {decoration.name} ({decoration.quantity} {decoration.unit})
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                                <div className="flex gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="0.01"
+                                                        value={sd.quantity}
+                                                        onChange={(e) => updateDecoration(index, 'quantity', e.target.value)}
+                                                        className="form-input flex-1"
+                                                        placeholder="Množství"
+                                                        required
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeDecoration(index)}
+                                                        className="btn btn-danger btn-small"
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Basics Section */}
+                                    <div className="border-t pt-3">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h4 className="font-semibold text-sm">📦 Basic</h4>
+                                            <button
+                                                type="button"
+                                                onClick={addBasic}
+                                                className="btn btn-secondary btn-small"
+                                            >
+                                                ➕
+                                            </button>
+                                        </div>
+                                        {formData.selectedBasics?.map((sb, index) => (
+                                            <div key={index} className="space-y-2 mb-3 list-item">
+                                                <select
+                                                    value={sb.basicId}
+                                                    onChange={(e) => updateBasic(index, 'basicId', e.target.value)}
+                                                    className="form-select"
+                                                    required
+                                                >
+                                                    <option value="">Vyberte basic</option>
+                                                    {basics?.map(basic => (
+                                                        <option key={basic.id} value={basic.id}>
+                                                            {basic.name} ({basic.quantity} {basic.unit})
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                                <div className="flex gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="0.01"
+                                                        value={sb.quantity}
+                                                        onChange={(e) => updateBasic(index, 'quantity', e.target.value)}
+                                                        className="form-input flex-1"
+                                                        placeholder="Množství"
+                                                        required
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeBasic(index)}
+                                                        className="btn btn-danger btn-small"
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Time Tracking */}
+                                    <div className="border-t pt-3">
+                                        <h4 className="font-semibold text-sm mb-2">⏱️ Čas</h4>
+                                        <div className="space-y-2">
+                                            <div className="form-group">
+                                                <label className="form-label">Příprava (hodiny)</label>
+                                                <input
+                                                    type="number"
+                                                    step="0.1"
+                                                    value={formData.preparationTime}
+                                                    onChange={(e) => setFormData({...formData, preparationTime: e.target.value})}
+                                                    className="form-input"
+                                                    placeholder="0.0"
+                                                />
+                                                <p className="text-xs text-gray mt-1">
+                                                    {formatCurrency(rates.preparation)}/hod
+                                                </p>
+                                            </div>
+
+                                            <div className="form-group">
+                                                <label className="form-label">Švadlena (celková cena v Kč)</label>
+                                                <input
+                                                    type="number"
+                                                    step="0.01"
+                                                    value={formData.seamstressPrice || ''}
+                                                    onChange={(e) => setFormData({...formData, seamstressPrice: e.target.value})}
+                                                    className="form-input"
+                                                    placeholder="0"
+                                                />
+                                                {formData.seamstressPrice && parseFloat(formData.seamstressPrice) > 0 && (
+                                                    <p className="text-xs text-gray mt-1">
+                                                        ≈ {(parseFloat(formData.seamstressPrice) / rates.seamstress).toFixed(1)} hodin 
+                                                        (sazba: {formatCurrency(rates.seamstress)}/hod)
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Extras */}
+                                    <div className="border-t pt-3">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h4 className="font-semibold text-sm">🔧 Vícepráce</h4>
+                                            <button
+                                                type="button"
+                                                onClick={addExtra}
+                                                className="btn btn-secondary btn-small"
+                                            >
+                                                ➕
+                                            </button>
+                                        </div>
+                                        {formData.extras.map((extra, index) => (
+                                            <div key={index} className="space-y-2 mb-3 list-item">
+                                                <input
+                                                    type="text"
+                                                    value={extra.name}
+                                                    onChange={(e) => updateExtra(index, 'name', e.target.value)}
+                                                    className="form-input"
+                                                    placeholder="Název práce"
+                                                    required
+                                                />
+                                                <div className="flex gap-2">
+                                                    <input
+                                                        type="number"
+                                                        step="0.01"
+                                                        value={extra.price}
+                                                        onChange={(e) => updateExtra(index, 'price', e.target.value)}
+                                                        className="form-input flex-1"
+                                                        placeholder="Kč"
+                                                        required
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => removeExtra(index)}
+                                                        className="btn btn-danger btn-small"
+                                                    >
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Sale Price */}
+                                    <div className="border-t pt-3">
+                                        <div className="form-group">
+                                            <label className="form-label">💰 Prodejní cena (Kč) *</label>
+                                            <input
+                                                type="number"
+                                                step="0.01"
+                                                required
+                                                value={formData.salePrice}
+                                                onChange={(e) => setFormData({...formData, salePrice: e.target.value})}
+                                                className="form-input"
+                                                placeholder="0.00"
+                                            />
+                                            <p className="text-xs text-gray mt-1">
+                                                Finální cena, za kterou prodáváte zakázku zákazníkovi
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Color Picker */}
+                                    <div className="border-t pt-3">
+                                        <div className="form-group">
+                                            <label className="form-label">🎨 Barva zakázky</label>
+                                            <div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap'}}>
+                                                {orderColors.map(color => (
+                                                    <button
+                                                        key={color.value}
+                                                        type="button"
+                                                        onClick={() => setFormData({...formData, color: color.value})}
+                                                        style={{
+                                                            width: '3rem',
+                                                            height: '3rem',
+                                                            borderRadius: '0.75rem',
+                                                            border: formData.color === color.value ? '3px solid #000' : '2px solid #d6d3d1',
+                                                            background: color.value,
+                                                            cursor: 'pointer',
+                                                            transform: formData.color === color.value ? 'scale(1.1)' : 'scale(1)',
+                                                            transition: 'all 0.2s',
+                                                            boxShadow: formData.color === color.value ? '0 4px 8px rgba(0,0,0,0.2)' : '0 2px 4px rgba(0,0,0,0.1)'
+                                                        }}
+                                                        title={color.name}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Images */}
+                                    <div className="border-t pt-3">
+                                        <div className="form-group">
+                                            <label className="form-label">📷 Fotografie (max 6, 2MB)</label>
+                                            <input
+                                                type="file"
+                                                multiple
+                                                accept="image/*"
+                                                onChange={handleImageUpload}
+                                                className="form-input"
+                                            />
+                                        </div>
+                                        {formData.images.length > 0 && (
+                                            <div className="image-grid">
+                                                {formData.images.map((img, index) => (
+                                                    <div key={index} className="image-preview">
+                                                        <img src={img} alt={`Náhled ${index + 1}`} />
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => removeImage(index)}
+                                                            className="image-remove"
+                                                        >
+                                                            ❌
+                                                        </button>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Notes */}
+                                    <div className="border-t pt-3">
+                                        <div className="form-group">
+                                            <label className="form-label">📝 Poznámky</label>
+                                            <textarea
+                                                value={formData.notes}
+                                                onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                                                className="form-textarea"
+                                                placeholder="Další poznámky..."
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Cost Summary */}
+                                <div className="summary-section">
+                                    <h4 className="font-semibold mb-2">💵 Kalkulace</h4>
+                                    <div className="summary-row">
+                                        <span>Látky:</span>
+                                        <span>{formatCurrency(costs.fabricsCost)}</span>
+                                    </div>
+                                    <div className="summary-row">
+                                        <span>Zdobení:</span>
+                                        <span>{formatCurrency(costs.decorationsCost)}</span>
+                                    </div>
+                                    <div className="summary-row">
+                                        <span>Basic:</span>
+                                        <span>{formatCurrency(costs.basicsCost)}</span>
+                                    </div>
+                                    <div className="summary-row">
+                                        <span>Příprava:</span>
+                                        <span>{formatCurrency(costs.prepCost)}</span>
+                                    </div>
+                                    <div className="summary-row">
+                                        <span>Švadlena:</span>
+                                        <span>{formatCurrency(costs.seamCost)}</span>
+                                    </div>
+                                    <div className="summary-row">
+                                        <span>Vícepráce:</span>
+                                        <span>{formatCurrency(costs.extrasCost)}</span>
+                                    </div>
+                                    <div className="summary-row border-t pt-2 font-semibold">
+                                        <span>Celkové náklady:</span>
+                                        <span>{formatCurrency(costs.totalCosts)}</span>
+                                    </div>
+                                    <div className="summary-total" style={{background: '#f0fdf4', borderRadius: '0.5rem', padding: '0.75rem', marginTop: '0.75rem', border: '2px solid #10b981'}}>
+                                        <span>Prodejní cena:</span>
+                                        <span style={{color: '#10b981'}}>{formatCurrency(costs.salePrice)}</span>
+                                    </div>
+                                    <div className="summary-row" style={{fontSize: '0.875rem', marginTop: '0.5rem'}}>
+                                        <span>Marže:</span>
+                                        <span className={costs.marginAmount >= 0 ? 'text-green' : 'text-red'} style={{fontWeight: '600'}}>
+                                            {formatCurrency(costs.marginAmount)} ({costs.marginPercent.toFixed(1)}%)
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-2 mt-3 items-center justify-between">
+                                    <button
+                                        type="button"
+                                        onClick={resetForm}
+                                        className="btn btn-secondary"
+                                    >
+                                        ✓ Zavřít
+                                    </button>
+                                    <div className="text-xs flex items-center gap-1">
+                                        {saveStatus === 'saved' && (
+                                            <span className="text-green-600">✓ Uloženo</span>
+                                        )}
+                                        {saveStatus === 'saving' && (
+                                            <span className="text-gray">💾 Ukládám...</span>
+                                        )}
+                                        {saveStatus === 'error' && (
+                                            <span className="text-red">⚠️ Chyba ukládání</span>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Search */}
+                    {!showForm && (
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            placeholder="🔍 Hledat podle jména zákazníka nebo názvu zakázky..."
+                            className="form-input"
+                        />
+                    )}
+
+                    {/* Active Orders List */}
+                    <div className="card">
+                        <h3 className="font-semibold mb-3">
+                            🛍️ Aktivní zakázky
+                        </h3>
+                        {(() => {
+                            const filteredOrders = orders
+                                .filter(o => o.status === 'active')
+                                .filter(o => {
+                                    const matchesSearch = searchTerm === '' || 
+                                        o.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                        o.customer?.toLowerCase().includes(searchTerm.toLowerCase());
+                                    return matchesSearch;
+                                });
+
+                            return filteredOrders.length === 0 ? (
+                                <div className="empty-state">
+                                    <p className="text-sm">
+                                        {searchTerm ? 'Žádné zakázky nevyhovují hledání' : 'Žádné aktivní zakázky'}
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className="space-y-2">
+                                    {filteredOrders.map(order => (
+                                        <OrderCard 
+                                            key={order.id} 
+                                            order={order} 
+                                            orders={orders}
+                                            setOrders={setOrders}
+                                            showToast={showToast}
+                                            onEdit={handleEdit}
+                                        />
+                                    ))}
+                                </div>
+                            );
+                        })()}
+                    </div>
+                </div>
+            );
+        };
+
+        // Order Card Component
+        const OrderCard = ({ order, orders, setOrders, showToast, onEdit }) => {
+            const [expanded, setExpanded] = useState(false);
+
+            const markComplete = () => {
+                if (window.confirm('Označit jako dokončenou?')) {
+                    setOrders(orders.map(o => 
+                        o.id === order.id ? { ...o, status: 'completed', completedAt: new Date().toISOString() } : o
+                    ));
+                    showToast('✅ Zakázka dokončena');
+                }
+            };
+
+            const deleteOrder = () => {
+                if (window.confirm('Opravdu smazat?')) {
+                    setOrders(orders.filter(o => o.id !== order.id));
+                    showToast('✅ Zakázka smazána');
+                }
+            };
+
+            const handleEdit = () => {
+                onEdit(order);
+            };
+
+            const total = calculateOrderTotal(order);
+
+            return (
+                <div 
+                    className="order-card" 
+                    style={{
+                        borderLeft: `5px solid ${order.color || '#8b7460'}`,
+                        background: `linear-gradient(to right, ${order.color || '#8b7460'}08 0%, transparent 100%)`
+                    }}
+                >
+                    <div className="order-header" onClick={() => setExpanded(!expanded)}>
+                        <div className="flex-1 min-w-0">
+                            <h4 className="font-bold text-base truncate">{order.customer || 'Bez jména'}</h4>
+                            <p className="text-sm text-gray mt-1">
+                                {order.name}
+                            </p>
+                            <p className="text-xs text-gray mt-0.5">
+                                {formatDate(order.createdAt)}
+                            </p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <div className="text-right">
+                                <p className="font-bold text-sm">{formatCurrency(total)}</p>
+                            </div>
+                            <div className="text-lg">
+                                {expanded ? '🔼' : '🔽'}
+                            </div>
+                        </div>
+                    </div>
+
+                    {expanded && (
+                        <div className="order-details space-y-3">
+                            {/* Color indicator header */}
+                            <div 
+                                style={{
+                                    background: `linear-gradient(135deg, ${order.color || '#8b7460'} 0%, ${order.color || '#a89380'} 100%)`,
+                                    margin: '-1rem -1rem 1rem -1rem',
+                                    padding: '0.5rem 1rem',
+                                    borderRadius: '0.75rem 0.75rem 0 0',
+                                    color: 'white',
+                                    fontWeight: '600',
+                                    fontSize: '0.75rem'
+                                }}
+                            >
+                                Zakázka
+                            </div>
+
+                            {/* Fabrics */}
+                            {order.fabrics && order.fabrics.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📦 Látky</h5>
+                                    {order.fabrics.map((f, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{f.name} ({f.quantity} m²)</span>
+                                            <span>{formatCurrency(f.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Decorations */}
+                            {order.decorations && order.decorations.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">✨ Zdobení</h5>
+                                    {order.decorations.map((d, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{d.name} ({d.quantity} {d.unit})</span>
+                                            <span>{formatCurrency(d.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Basics */}
+                            {order.basics && order.basics.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📦 Basic</h5>
+                                    {order.basics.map((b, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{b.name} ({b.quantity} {b.unit})</span>
+                                            <span>{formatCurrency(b.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Time */}
+                            <div>
+                                <h5 className="font-medium text-sm mb-1">⏱️ Čas</h5>
+                                <div className="flex justify-between text-xs text-gray mb-1">
+                                    <span>Příprava ({order.preparationTime}h)</span>
+                                    <span>{formatCurrency(order.preparationTime * order.preparationRate)}</span>
+                                </div>
+                                <div className="flex justify-between text-xs text-gray">
+                                    <span>Švadlena {order.seamstressPrice > 0 && `(≈${(order.seamstressPrice / order.seamstressRate).toFixed(1)}h)`}</span>
+                                    <span>{formatCurrency(order.seamstressPrice > 0 ? order.seamstressPrice : (order.seamstressTime * order.seamstressRate))}</span>
+                                </div>
+                            </div>
+
+                            {/* Extras */}
+                            {order.extras && order.extras.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">🔧 Vícepráce</h5>
+                                    {order.extras.map((e, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{e.name}</span>
+                                            <span>{formatCurrency(e.price)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Images */}
+                            {order.images && order.images.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📷 Fotografie</h5>
+                                    <div className="image-grid">
+                                        {order.images.map((img, i) => (
+                                            <img 
+                                                key={i}
+                                                src={img}
+                                                alt={`Foto ${i + 1}`}
+                                                style={{width: '100%', height: '5rem', objectFit: 'cover', borderRadius: '0.5rem', cursor: 'pointer'}}
+                                                onClick={() => window.open(img, '_blank')}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Notes */}
+                            {order.notes && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📝 Poznámky</h5>
+                                    <p className="text-xs text-gray">{order.notes}</p>
+                                </div>
+                            )}
+
+                            {/* Actions */}
+                            <div className="flex gap-2 border-t pt-3">
+                                <button
+                                    onClick={handleEdit}
+                                    className="btn btn-secondary flex-1 btn-small"
+                                >
+                                    ✏️ Upravit
+                                </button>
+                                <button
+                                    onClick={markComplete}
+                                    className="btn btn-success flex-1 btn-small"
+                                >
+                                    ✅ Dokončit
+                                </button>
+                                <button
+                                    onClick={deleteOrder}
+                                    className="btn btn-danger btn-small"
+                                >
+                                    🗑️
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        // History Component
+        const History = ({ orders, setOrders, showToast }) => {
+            const [filter, setFilter] = useState('all');
+            const [searchTerm, setSearchTerm] = useState('');
+
+            const filteredOrders = orders.filter(order => {
+                const matchesFilter = filter === 'all' || order.status === filter;
+                const matchesSearch = order.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                     order.customer?.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            const exportOrder = (order) => {
+                const total = calculateOrderTotal(order);
+                const costs = calculateOrderCosts(order);
+
+                let text = `ZAKÁZKA: ${order.name}\n`;
+                text += `========================================\n`;
+                text += `Zákazník: ${order.customer || 'N/A'}\n`;
+                text += `Vytvořeno: ${formatDate(order.createdAt)}\n`;
+                if (order.completedAt) {
+                    text += `Dokončeno: ${formatDate(order.completedAt)}\n`;
+                }
+                text += `\nLÁTKY:\n`;
+                order.fabrics?.forEach(f => {
+                    text += `- ${f.name}: ${f.quantity} m² × ${formatCurrency(f.pricePerM2)} = ${formatCurrency(f.totalCost)}\n`;
+                });
+                text += `\nČAS:\n`;
+                text += `- Příprava: ${order.preparationTime}h × ${formatCurrency(order.preparationRate)} = ${formatCurrency(order.preparationTime * order.preparationRate)}\n`;
+                if (order.seamstressPrice && order.seamstressPrice > 0) {
+                    text += `- Švadlena: ${formatCurrency(order.seamstressPrice)} (≈${(order.seamstressPrice / order.seamstressRate).toFixed(1)}h)\n`;
+                } else {
+                    text += `- Švadlena: ${order.seamstressTime}h × ${formatCurrency(order.seamstressRate)} = ${formatCurrency(order.seamstressTime * order.seamstressRate)}\n`;
+                }
+                if (order.extras?.length > 0) {
+                    text += `\nVÍCEPRÁCE:\n`;
+                    order.extras.forEach(e => {
+                        text += `- ${e.name}: ${formatCurrency(e.price)}\n`;
+                    });
+                }
+                text += `\n========================================\n`;
+                text += `Náklady: ${formatCurrency(costs)}\n`;
+                text += `CELKEM: ${formatCurrency(total)}\n`;
+                text += `ZISK: ${formatCurrency(total - costs)}\n`;
+
+                const blob = new Blob([text], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `zakazka-${order.name.replace(/\s+/g, '-')}.txt`;
+                a.click();
+                URL.revokeObjectURL(url);
+                showToast('✅ Zakázka exportována');
+            };
+
+            return (
+                <div className="fade-in space-y-4">
+                    <h2 className="text-xl heading-font font-semibold">
+                        📜 Historie
+                    </h2>
+
+                    <div className="space-y-2">
+                        <input
+                            type="text"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            placeholder="🔍 Hledat..."
+                            className="form-input"
+                        />
+                        <select
+                            value={filter}
+                            onChange={(e) => setFilter(e.target.value)}
+                            className="form-select"
+                        >
+                            <option value="all">Všechny zakázky</option>
+                            <option value="active">Aktivní</option>
+                            <option value="completed">Dokončené</option>
+                        </select>
+                    </div>
+
+                    {filteredOrders.length === 0 ? (
+                        <div className="card">
+                            <div className="empty-state">
+                                <div className="empty-icon">🔍</div>
+                                <p>Nenalezeny žádné zakázky</p>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="space-y-3">
+                            {filteredOrders.map(order => (
+                                <HistoryOrderCard 
+                                    key={order.id}
+                                    order={order}
+                                    exportOrder={exportOrder}
+                                    setOrders={setOrders}
+                                    showToast={showToast}
+                                />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        // History Order Card Component with expandable details
+        const HistoryOrderCard = ({ order, exportOrder, setOrders, showToast }) => {
+            const [expanded, setExpanded] = useState(false);
+            const total = calculateOrderTotal(order);
+            const costs = calculateOrderCosts(order);
+            const profit = total - costs;
+
+            const reactivateOrder = () => {
+                if (window.confirm('Obnovit zakázku jako aktivní?')) {
+                    setOrders(prevOrders => prevOrders.map(o => 
+                        o.id === order.id ? { ...o, status: 'active', completedAt: null } : o
+                    ));
+                    showToast('✅ Zakázka obnovena');
+                }
+            };
+
+            return (
+                <div 
+                    className="card" 
+                    style={{
+                        borderLeft: `5px solid ${order.color || '#8b7460'}`,
+                        background: `linear-gradient(to right, ${order.color || '#8b7460'}08 0%, transparent 100%)`
+                    }}
+                >
+                    <div 
+                        className="flex items-start justify-between gap-3 cursor-pointer"
+                        onClick={() => setExpanded(!expanded)}
+                    >
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                            <div className="text-xl">
+                                {order.status === 'active' ? '⏳' : '✅'}
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <h3 className="font-bold text-base">{order.customer || 'Bez jména'}</h3>
+                                <p className="text-sm text-gray">{order.name}</p>
+                                <p className="text-xs text-gray">
+                                    {formatDate(order.createdAt)}
+                                    {order.completedAt && ` • Dokončeno: ${formatDate(order.completedAt)}`}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div className="text-lg">
+                                {expanded ? '🔼' : '🔽'}
+                            </div>
+                        </div>
+                    </div>
+
+                    {!expanded && (
+                        <div className="grid grid-2 gap-2 list-item mt-3">
+                            <div className="text-center">
+                                <p className="text-xs text-gray">Celkem</p>
+                                <p className="font-semibold text-sm">
+                                    {formatCurrency(total)}
+                                </p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-xs text-gray">Zisk</p>
+                                <p className="font-semibold text-sm text-green">
+                                    {formatCurrency(profit)}
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {expanded && (
+                        <div className="order-details space-y-3 mt-3 pt-3 border-t">
+                            {/* Color indicator header */}
+                            <div 
+                                style={{
+                                    background: `linear-gradient(135deg, ${order.color || '#8b7460'} 0%, ${order.color || '#a89380'} 100%)`,
+                                    margin: '-1rem -1rem 1rem -1rem',
+                                    padding: '0.5rem 1rem',
+                                    borderRadius: '0.75rem 0.75rem 0 0',
+                                    color: 'white',
+                                    fontWeight: '600',
+                                    fontSize: '0.75rem'
+                                }}
+                            >
+                                {order.status === 'active' ? '⏳ Aktivní zakázka' : '✅ Dokončená zakázka'}
+                            </div>
+
+                            {/* Summary Stats */}
+                            <div className="grid grid-3 gap-2 mb-3">
+                                <div className="text-center list-item">
+                                    <p className="text-xs text-gray">Celkem</p>
+                                    <p className="font-semibold text-sm">{formatCurrency(total)}</p>
+                                </div>
+                                <div className="text-center list-item">
+                                    <p className="text-xs text-gray">Náklady</p>
+                                    <p className="font-semibold text-sm">{formatCurrency(costs)}</p>
+                                </div>
+                                <div className="text-center list-item">
+                                    <p className="text-xs text-gray">Zisk</p>
+                                    <p className="font-semibold text-sm text-green">{formatCurrency(profit)}</p>
+                                </div>
+                            </div>
+
+                            {/* Fabrics */}
+                            {order.fabrics && order.fabrics.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📦 Látky</h5>
+                                    {order.fabrics.map((f, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{f.name} ({f.quantity} m²)</span>
+                                            <span>{formatCurrency(f.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Decorations */}
+                            {order.decorations && order.decorations.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">✨ Zdobení</h5>
+                                    {order.decorations.map((d, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{d.name} ({d.quantity} {d.unit})</span>
+                                            <span>{formatCurrency(d.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Basics */}
+                            {order.basics && order.basics.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📦 Basic</h5>
+                                    {order.basics.map((b, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{b.name} ({b.quantity} {b.unit})</span>
+                                            <span>{formatCurrency(b.totalCost)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Time */}
+                            <div>
+                                <h5 className="font-medium text-sm mb-1">⏱️ Čas</h5>
+                                <div className="flex justify-between text-xs text-gray mb-1">
+                                    <span>Příprava ({order.preparationTime}h)</span>
+                                    <span>{formatCurrency(order.preparationTime * order.preparationRate)}</span>
+                                </div>
+                                <div className="flex justify-between text-xs text-gray">
+                                    <span>Švadlena {order.seamstressPrice > 0 && `(≈${(order.seamstressPrice / order.seamstressRate).toFixed(1)}h)`}</span>
+                                    <span>{formatCurrency(order.seamstressPrice > 0 ? order.seamstressPrice : (order.seamstressTime * order.seamstressRate))}</span>
+                                </div>
+                            </div>
+
+                            {/* Extras */}
+                            {order.extras && order.extras.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">🔧 Vícepráce</h5>
+                                    {order.extras.map((e, i) => (
+                                        <div key={i} className="flex justify-between text-xs text-gray mb-1">
+                                            <span>{e.name}</span>
+                                            <span>{formatCurrency(e.price)}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Images */}
+                            {order.images && order.images.length > 0 && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📷 Fotografie</h5>
+                                    <div className="image-grid">
+                                        {order.images.map((img, i) => (
+                                            <img 
+                                                key={i}
+                                                src={img}
+                                                alt={`Foto ${i + 1}`}
+                                                style={{width: '100%', height: '5rem', objectFit: 'cover', borderRadius: '0.5rem', cursor: 'pointer'}}
+                                                onClick={() => window.open(img, '_blank')}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Notes */}
+                            {order.notes && (
+                                <div>
+                                    <h5 className="font-medium text-sm mb-1">📝 Poznámky</h5>
+                                    <p className="text-xs text-gray">{order.notes}</p>
+                                </div>
+                            )}
+
+                            {/* Actions */}
+                            <div className="flex gap-2 border-t pt-3">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        exportOrder(order);
+                                    }}
+                                    className="btn btn-secondary flex-1 btn-small"
+                                >
+                                    💾 Export
+                                </button>
+                                {order.status === 'completed' && (
+                                    <button
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            reactivateOrder();
+                                        }}
+                                        className="btn btn-success flex-1 btn-small"
+                                    >
+                                        ↩️ Obnovit
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        // Settings Component
+        const Settings = ({ rates, setRates, fabrics, decorations, orders, logo, setLogo, showToast }) => {
+            const [tempRates, setTempRates] = useState(rates);
+
+            const handleSave = () => {
+                setRates(tempRates);
+                showToast('✅ Nastavení uloženo');
+            };
+
+            const handleReset = () => {
+                if (window.confirm('⚠️ Opravdu vymazat všechna data? Tato akce je nevratná!')) {
+                    localStorage.clear();
+                    window.location.reload();
+                }
+            };
+
+            const exportData = () => {
+                const data = {
+                    version: '1.0',
+                    exportDate: new Date().toISOString(),
+                    fabrics,
+                    decorations,
+                    basics,
+                    orders,
+                    rates
+                };
+                
+                const dataStr = JSON.stringify(data, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `atelier-backup-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                showToast('✅ Data exportována');
+            };
+
+            const importData = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const data = JSON.parse(event.target.result);
+                        if (data.version && data.fabrics && data.orders && data.rates) {
+                            if (window.confirm('Opravdu chcete importovat data? Současná data budou přepsána.')) {
+                                window.localStorage.setItem('fabrics', JSON.stringify(data.fabrics));
+                                window.localStorage.setItem('decorations', JSON.stringify(data.decorations || []));
+                                window.localStorage.setItem('basics', JSON.stringify(data.basics || []));
+                                window.localStorage.setItem('orders', JSON.stringify(data.orders));
+                                window.localStorage.setItem('rates', JSON.stringify(data.rates));
+                                showToast('✅ Data importována');
+                                setTimeout(() => window.location.reload(), 1500);
+                            }
+                        } else {
+                            alert('❌ Neplatný formát souboru!');
+                        }
+                    } catch (error) {
+                        alert('❌ Chyba při načítání souboru!');
+                    }
+                };
+                reader.readAsText(file);
+                e.target.value = '';
+            };
+
+            return (
+                <div className="fade-in space-y-4">
+                    <h2 className="text-xl heading-font font-semibold">
+                        ⚙️ Nastavení
+                    </h2>
+
+                    <div className="card">
+                        <h3 className="font-semibold mb-3">
+                            🎨 Logo aplikace
+                        </h3>
+                        <div className="text-center mb-4">
+                            <div style={{fontSize: '4rem', height: '5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                {logo.startsWith('data:') ? (
+                                    <img src={logo} alt="Logo" style={{maxHeight: '5rem', maxWidth: '100%', objectFit: 'contain'}} />
+                                ) : (
+                                    <span>{logo}</span>
+                                )}
+                            </div>
+                        </div>
+                        <div className="space-y-2">
+                            <label className="btn btn-secondary w-full" style={{cursor: 'pointer'}}>
+                                📤 Nahrát vlastní logo
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={(e) => {
+                                        const file = e.target.files[0];
+                                        if (file) {
+                                            if (file.size > 500000) {
+                                                alert('⚠️ Obrázek je příliš velký (max 500KB)');
+                                                return;
+                                            }
+                                            const reader = new FileReader();
+                                            reader.onloadend = () => {
+                                                setLogo(reader.result);
+                                                showToast('✅ Logo aktualizováno');
+                                            };
+                                            reader.readAsDataURL(file);
+                                        }
+                                        e.target.value = '';
+                                    }}
+                                    style={{display: 'none'}}
+                                />
+                            </label>
+                            <button
+                                onClick={() => {
+                                    setLogo('✂️');
+                                    showToast('✅ Logo obnoveno');
+                                }}
+                                className="btn btn-secondary w-full"
+                            >
+                                🔄 Obnovit výchozí
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <h3 className="font-semibold mb-3">
+                            💰 Hodinové sazby
+                        </h3>
+                        <div className="space-y-3 mb-4">
+                            <div className="form-group">
+                                <label className="form-label">Příprava (Kč/hod)</label>
+                                <input
+                                    type="number"
+                                    step="0.01"
+                                    value={tempRates.preparation}
+                                    onChange={(e) => setTempRates({...tempRates, preparation: parseFloat(e.target.value)})}
+                                    className="form-input"
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label className="form-label">Švadlena (Kč/hod)</label>
+                                <input
+                                    type="number"
+                                    step="0.01"
+                                    value={tempRates.seamstress}
+                                    onChange={(e) => setTempRates({...tempRates, seamstress: parseFloat(e.target.value)})}
+                                    className="form-input"
+                                />
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={handleSave}
+                            className="btn btn-primary w-full"
+                        >
+                            💾 Uložit
+                        </button>
+                    </div>
+
+                    <div className="card">
+                        <h3 className="font-semibold mb-3">
+                            💾 Zálohování dat
+                        </h3>
+                        <p className="text-xs text-gray mb-3">
+                            ✨ Aplikace automaticky zálohuje data každých 5 minut do prohlížeče. Doporučujeme pravidelně stahovat zálohu do souboru.
+                        </p>
+                        <div className="space-y-2">
+                            <button
+                                onClick={exportData}
+                                className="btn btn-primary w-full"
+                            >
+                                📥 Stáhnout zálohu (JSON)
+                            </button>
+                            <div>
+                                <label className="btn btn-secondary w-full" style={{cursor: 'pointer'}}>
+                                    📤 Nahrát zálohu (JSON)
+                                    <input
+                                        type="file"
+                                        accept=".json"
+                                        onChange={importData}
+                                        style={{display: 'none'}}
+                                    />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <h3 className="font-semibold mb-3">
+                            📊 Přehled dat
+                        </h3>
+                        <div className="grid grid-3 gap-2 mb-4">
+                            <div className="text-center list-item">
+                                <div className="text-2xl font-bold">{fabrics.length}</div>
+                                <div className="text-xs text-gray">Látek</div>
+                            </div>
+                            <div className="text-center list-item">
+                                <div className="text-2xl font-bold">{decorations?.length || 0}</div>
+                                <div className="text-xs text-gray">Zdobení</div>
+                            </div>
+                            <div className="text-center list-item">
+                                <div className="text-2xl font-bold">{orders.filter(o => o.status === 'active').length}</div>
+                                <div className="text-xs text-gray">Aktivních</div>
+                            </div>
+                        </div>
+                        <div className="grid grid-2 gap-2 mb-4">
+                            <div className="text-center list-item">
+                                <div className="text-2xl font-bold">{orders.filter(o => o.status === 'completed').length}</div>
+                                <div className="text-xs text-gray">Dokončených</div>
+                            </div>
+                            <div className="text-center list-item">
+                                <div className="text-2xl font-bold">{orders.length}</div>
+                                <div className="text-xs text-gray">Celkem zakázek</div>
+                            </div>
+                        </div>
+                        <p className="text-xs text-gray mb-3">
+                            Data jsou uložena lokálně ve vašem prohlížeči. Pravidelně zálohujte pomocí karty výše.
+                        </p>
+                        <button
+                            onClick={handleReset}
+                            className="btn btn-danger w-full"
+                        >
+                            ⚠️ Vymazat vše
+                        </button>
+                    </div>
+
+                    <div className="card text-center">
+                        <h3 className="font-semibold mb-2">
+                            ℹ️ O aplikaci
+                        </h3>
+                        <p className="text-sm text-gray">
+                            <strong>Atelier Manager</strong>
+                        </p>
+                        <p className="text-xs text-gray mt-1">
+                            Verze 1.0 Mobile • React PWA
+                        </p>
+                        <p className="text-xs text-gray mt-2">
+                            Pro iPhone optimalizováno
+                        </p>
+                    </div>
+                </div>
+            );
+        };
+
+        // Render App
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<AtelierManager />);
+    </script>
+</body>
+</html>
